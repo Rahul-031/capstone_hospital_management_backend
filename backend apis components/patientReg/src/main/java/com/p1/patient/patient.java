@@ -1,4 +1,4 @@
-package com.p1;
+package com.p1.patient;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;

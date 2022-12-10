@@ -1,4 +1,4 @@
-package com.p1;
+package com.p1.patient;
 
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;

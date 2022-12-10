@@ -1,4 +1,4 @@
-package com.p1;
+package com.p1.patient;
 import java.util.List;
 public interface patientService {
 	public patient create(patient patient);
