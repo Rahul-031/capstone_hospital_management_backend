@@ -20,6 +20,7 @@ public class patient {
     String id_proof;
     String id_no;
     String pass;
+    String status;
     
     
 	public patient() {
@@ -28,7 +29,7 @@ public class patient {
 
 
 	public patient(int id, String first_name, String last_name, String gender, String dof, String email,
-			String phone_no, String id_proof, String id_no, String pass) {
+			String phone_no, String id_proof, String id_no, String pass,String status) {
 		this.id = id;
 		this.first_name = first_name;
 		this.last_name = last_name;
@@ -39,6 +40,7 @@ public class patient {
 		this.id_proof = id_proof;
 		this.id_no = id_no;
 		this.pass = pass;
+		this.status=status;
 	}
 
 
@@ -134,6 +136,14 @@ public class patient {
 
 	public String getPass() {
 		return pass;
+	}
+
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public String getStatus() {
+		return status;
 	}
 
 

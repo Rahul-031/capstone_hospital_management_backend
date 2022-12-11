@@ -20,17 +20,23 @@ String gender;
 String dob;
 String email;
 String phone_no;
-String id_proof;
-String id_no;
 String specialization;
 String qualification;
+String registration_date;
+int department_id;
+int slot_id;
+String age;
 String pass;
+String status;
+
 public doctor() {
-	super();
+	
+	// TODO Auto-generated constructor stub
 }
 public doctor(int id, String first_name, String last_name, String gender, String dob, String email, String phone_no,
-		String id_proof, String id_no, String specialization, String qualification, String pass) {
-	super();
+		String specialization, String qualification, String registration_date, int department_id, int slot_id,
+		String age, String pass,String status) {
+	
 	this.id = id;
 	this.first_name = first_name;
 	this.last_name = last_name;
@@ -38,11 +44,14 @@ public doctor(int id, String first_name, String last_name, String gender, String
 	this.dob = dob;
 	this.email = email;
 	this.phone_no = phone_no;
-	this.id_proof = id_proof;
-	this.id_no = id_no;
 	this.specialization = specialization;
 	this.qualification = qualification;
+	this.registration_date = registration_date;
+	this.department_id = department_id;
+	this.slot_id = slot_id;
+	this.age = age;
 	this.pass = pass;
+	this.status=status;
 }
 public int getId() {
 	return id;
@@ -86,18 +95,6 @@ public String getPhone_no() {
 public void setPhone_no(String phone_no) {
 	this.phone_no = phone_no;
 }
-public String getId_proof() {
-	return id_proof;
-}
-public void setId_proof(String id_proof) {
-	this.id_proof = id_proof;
-}
-public String getId_no() {
-	return id_no;
-}
-public void setId_no(String id_no) {
-	this.id_no = id_no;
-}
 public String getSpecialization() {
 	return specialization;
 }
@@ -110,18 +107,48 @@ public String getQualification() {
 public void setQualification(String qualification) {
 	this.qualification = qualification;
 }
+public String getRegistration_date() {
+	return registration_date;
+}
+public void setRegistration_date(String registration_date) {
+	this.registration_date = registration_date;
+}
+public int getDepartment_id() {
+	return department_id;
+}
+public void setDepartment_id(int department_id) {
+	this.department_id = department_id;
+}
+public int getSlot_id() {
+	return slot_id;
+}
+public void setSlot_id(int slot_id) {
+	this.slot_id = slot_id;
+}
+public String getAge() {
+	return age;
+}
+public void setAge(String age) {
+	this.age = age;
+}
 public String getPass() {
 	return pass;
 }
 public void setPass(String pass) {
 	this.pass = pass;
 }
+public void setStatus(String status) {
+	this.status = status;
+}
+public String getStatus() {
+	return status;
+}
 @Override
 public String toString() {
 	return "doctor [id=" + id + ", first_name=" + first_name + ", last_name=" + last_name + ", gender=" + gender
-			+ ", dob=" + dob + ", email=" + email + ", phone_no=" + phone_no + ", id_proof=" + id_proof + ", id_no="
-			+ id_no + ", specialization=" + specialization + ", qualification=" + qualification + ", pass=" + pass
-			+ "]";
+			+ ", dob=" + dob + ", email=" + email + ", phone_no=" + phone_no + ", specialization=" + specialization
+			+ ", qualification=" + qualification + ", registration_date=" + registration_date + ", department_id="
+			+ department_id + ", slot_id=" + slot_id + ", age=" + age + ", pass=" + pass + "]";
 }
 
 }

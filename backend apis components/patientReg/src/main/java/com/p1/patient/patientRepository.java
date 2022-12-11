@@ -12,9 +12,10 @@ public interface patientRepository extends JpaRepository<patient, Long>{
 	
 	void delete(patient patient);
 	
+	@Query("select p from patient p where status ='active'")
 	List findAll();
 	
-	@Query("select p from patient p where id =?1")
+	@Query("select p from patient p where status ='active'")
 	patient findById(int id);
 	
 	patient save(patient patient);
