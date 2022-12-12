@@ -1,6 +1,7 @@
 package com.p1.doctors;
 
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,7 +15,10 @@ public class doctor {
 @Id
 @GeneratedValue(strategy = GenerationType.AUTO)
 int id;
+
+@Column(name = "first_name")
 String first_name;
+
 String last_name;
 String gender;
 String dob;
@@ -23,7 +27,9 @@ String phone_no;
 String specialization;
 String qualification;
 String registration_date;
-int department_id;
+
+@Column(name = "department_id")
+int did;
 int slot_id;
 String age;
 String pass;
@@ -34,7 +40,7 @@ public doctor() {
 	// TODO Auto-generated constructor stub
 }
 public doctor(int id, String first_name, String last_name, String gender, String dob, String email, String phone_no,
-		String specialization, String qualification, String registration_date, int department_id, int slot_id,
+		String specialization, String qualification, String registration_date, int did, int slot_id,
 		String age, String pass,String status) {
 	
 	this.id = id;
@@ -47,7 +53,7 @@ public doctor(int id, String first_name, String last_name, String gender, String
 	this.specialization = specialization;
 	this.qualification = qualification;
 	this.registration_date = registration_date;
-	this.department_id = department_id;
+	this.did = did;
 	this.slot_id = slot_id;
 	this.age = age;
 	this.pass = pass;
@@ -113,11 +119,11 @@ public String getRegistration_date() {
 public void setRegistration_date(String registration_date) {
 	this.registration_date = registration_date;
 }
-public int getDepartment_id() {
-	return department_id;
+public int getdid() {
+	return did;
 }
-public void setDepartment_id(int department_id) {
-	this.department_id = department_id;
+public void setdid(int did) {
+	this.did = did;
 }
 public int getSlot_id() {
 	return slot_id;
@@ -147,8 +153,8 @@ public String getStatus() {
 public String toString() {
 	return "doctor [id=" + id + ", first_name=" + first_name + ", last_name=" + last_name + ", gender=" + gender
 			+ ", dob=" + dob + ", email=" + email + ", phone_no=" + phone_no + ", specialization=" + specialization
-			+ ", qualification=" + qualification + ", registration_date=" + registration_date + ", department_id="
-			+ department_id + ", slot_id=" + slot_id + ", age=" + age + ", pass=" + pass + "]";
+			+ ", qualification=" + qualification + ", registration_date=" + registration_date + ", did="
+			+ did + ", slot_id=" + slot_id + ", age=" + age + ", pass=" + pass + "]";
 }
 
 }

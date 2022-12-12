@@ -14,15 +14,15 @@ doctorRepository repo;
 		return repo.save(doctor);
 	}
 
-	@Override
-	public doctor delete(int id) {
-		// TODO Auto-generated method stub
-		doctor d = findById(id);
-		if(d!=null) {
-			repo.delete(d);
-		}
-		return d;
-	}
+//	@Override
+//	public doctor delete(int id) {
+//		// TODO Auto-generated method stub
+//		doctor d = findById(id);
+//		if(d!=null) {
+//			repo.delete(d);
+//		}
+//		return d;
+//	}
 
 	@Override
 	public List findAll() {
@@ -31,9 +31,9 @@ doctorRepository repo;
 	}
 
 	@Override
-	public doctor findById(int id) {
+	public List<doctor> findById(int id) {
 		// TODO Auto-generated method stub
-		return repo.findById(id);
+		return repo.findAllDoctorByDid(id);
 	}
 
 	@Override

@@ -25,7 +25,7 @@ public doctor create(@RequestBody doctor doctor){
 }
 
 @GetMapping(path = {"/{id}"})
-public doctor findOne(@PathVariable("id") int id){
+public List<doctor> findOne(@PathVariable("id") int id){
     return ds.findById(id);
 }
 
@@ -34,10 +34,10 @@ public doctor update(@RequestBody doctor doctor){
     return ds.update(doctor);
 }
 
-@DeleteMapping(path ={"/{id}"})
-public doctor delete(@PathVariable("id") int id) {
-    return ds.delete(id);
-}
+//@DeleteMapping(path ={"/{id}"})
+//public doctor delete(@PathVariable("id") int id) {
+//    return ds.delete(id);
+//}
 
 @GetMapping(value="/doctors")
 public List findAll(){
