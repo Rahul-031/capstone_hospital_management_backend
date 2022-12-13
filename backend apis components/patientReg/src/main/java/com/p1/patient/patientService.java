@@ -5,5 +5,5 @@ public interface patientService {
 	public patient delete(int id);
 	public List findAll();
 	public patient findById(int id);
-	public patient update(patient patient);
+	public int update(int id);
 }

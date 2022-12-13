@@ -22,9 +22,9 @@ public class patientController {
         return ps.findById(id);
     }
 	
-	@PutMapping
-    public patient update(@RequestBody patient patient){
-        return ps.update(patient);
+	@PutMapping(path={"/{id}"})
+    public int update(@PathVariable("id") int id){
+        return ps.update(id);
     }
 	
 	@DeleteMapping(path ={"/{id}"})

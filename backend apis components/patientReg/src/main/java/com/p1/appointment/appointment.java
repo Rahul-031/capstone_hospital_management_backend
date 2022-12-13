@@ -1,4 +1,5 @@
 package com.p1.appointment;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -8,25 +9,27 @@ import javax.persistence.Table;
 @Entity
 @Table(name= "appointment")
 public class appointment {
-	@Id 
-	@GeneratedValue(strategy = GenerationType.AUTO)
-int appointment_id;
+@Id 
+@GeneratedValue(strategy = GenerationType.AUTO)
+int id;
+@Column(name = "patientname")
 String patientname;
+@Column(name = "doctorname")
 String doctorname;
 public appointment() {
-	super();
+	
 }
-public appointment(int appointment_id, String patientname, String doctorname) {
-	super();
-	this.appointment_id = appointment_id;
+public appointment(int id, String patientname, String doctorname) {
+	
+	this.id = id;
 	this.patientname = patientname;
 	this.doctorname = doctorname;
 }
-public int getAppointment_id() {
-	return appointment_id;
+public int getid() {
+	return id;
 }
-public void setAppointment_id(int appointment_id) {
-	this.appointment_id = appointment_id;
+public void setid(int id) {
+	this.id = id;
 }
 public String getPatientname() {
 	return patientname;
@@ -42,7 +45,7 @@ public void setDoctorname(String doctorname) {
 }
 @Override
 public String toString() {
-	return "appointment [appointment_id=" + appointment_id + ", patientname=" + patientname + ", doctorname="
+	return "appointment [id=" + id + ", patientname=" + patientname + ", doctorname="
 			+ doctorname + "]";
 }
 

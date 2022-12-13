@@ -1,4 +1,5 @@
 package com.p1.patient;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,6 +21,7 @@ public class patient {
     String id_proof;
     String id_no;
     String pass;
+    @Column(name = "status")
     String status;
     
     

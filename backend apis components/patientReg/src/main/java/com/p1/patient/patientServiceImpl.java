@@ -39,9 +39,10 @@ public class patientServiceImpl implements patientService {
 	}
 
 	@Override
-	public patient update(patient patient) {
+	public int update(int id) {
 		// TODO Auto-generated method stub
-		return null;
+		
+		return repo.setPatientInfoById(id);
 	}
 
 }

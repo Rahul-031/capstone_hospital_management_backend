@@ -9,12 +9,12 @@ import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping({"/api"})
+@RequestMapping({"/a"})
 public class appointmentController {
 	@Autowired
 	private appointmentService as;
 	
-	@PostMapping(value="/appointment")
+	@PostMapping(value="/appointment", produces="application/json")
     public appointment create(@RequestBody appointment appointment){
         return as.create(appointment);
     }
