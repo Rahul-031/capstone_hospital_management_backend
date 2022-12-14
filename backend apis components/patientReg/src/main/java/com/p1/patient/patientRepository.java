@@ -23,6 +23,7 @@ public interface patientRepository extends JpaRepository<patient, Long>{
 	patient save(patient patient);
 	
 	@Transactional
+	@Modifying
 	@Query("update patient p set p.status='Deactive' where id = ?1 ")
 	int setPatientInfoById(int id);
 	
